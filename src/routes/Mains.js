@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getData  } from '../utilities/data';
+import { getData } from '../utilities/data';
 import { getLocalStorage, setLocalStorage } from '../utilities/localStorage';
 
 export default function Mains() {
