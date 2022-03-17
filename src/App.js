@@ -2,6 +2,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Card, Nav, Button } from 'react-bootstrap'
 // import Mains from '../routes/Mains';
+// import { Appetizers, Desserts, Mains } from 'routes'
+
+import Appetizers from './routes/Appetizers';
+import Mains from './routes/Mains';
+import Desserts from './routes/Desserts';
 
 
 
@@ -28,6 +33,10 @@ function App() {
           <Button variant="danger">Our Menu</Button>
         </Card.ImgOverlay>
       </Card>
+
+      <Appetizers />
+      <Mains />
+      <Desserts />
     </div>
   );
 }

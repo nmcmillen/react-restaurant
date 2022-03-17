@@ -19,7 +19,9 @@ export default function Mains() {
         }
     }, []);
 
-  return (
-    <div></div>
-  );
+    return (
+        <div>
+            <h1>Welcome to the Mains page</h1>
+        </div>
+    )
 }
