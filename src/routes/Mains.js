@@ -19,6 +19,10 @@ export default function Mains() {
         }
     }, []);
 
+    let mainDishes = mains.map((maindish) => {
+    return <mains key={maindish.id} maindish={maindish} />;
+    })
+
     return (
         <div>
             <h1>Welcome to the Mains page</h1>
