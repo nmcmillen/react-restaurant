@@ -1,31 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Navbar, Container, Card, Nav, Button, Col } from 'react-bootstrap'
 import { getData } from '../utilities/data';
-import { getLocalStorage, setLocalStorage } from '../utilities/localStorage';
 
-export default function Mains() {
-    const [mains, setMains] = useState ([]);
-
+export default function Main () {
+    const [ mains, setMains ] = useState([]);
 
     useEffect(() => {
-        let data = getLocalStorage();
-        if (data.length > 0) {
-            setMains(data);
-        } else {
-            getData()
-            .then((data) => {
-                setMains(data);
-                setLocalStorage(data)
-            })
-        }
+        getData()
+        .then((data) => {
+            setMains(data)
+        })
     }, []);
-
-    let mainDishes = mains.map((maindish) => {
-    return <mains key={maindish.id} maindish={maindish} />;
-    })
+    
+    let mainList = mains.filter((displayMenu) => displayMenu.category.title == "Burgers" || "Sandwiches" || "Pasta" || "House Favorites" && displayMenu.cuisine.label == "American").map((displayMenu) => {
+    return <Apps key={displayMenu.id} displayMenu={displayMenu} />;
+    });
 
     return (
-        <div>
-            <h1>Welcome to the Mains page</h1>
-        </div>
+        <main style={{ padding: "1rem 0" }} className="container">
+          <div className="row justify-content-center text-center gap-2">
+            <h2>Main Dishes</h2>
+            {mainList}
+          </div>
+        </main>
+      );
+}
+// END OF MENU FUNCTION
+
+const Apps = ({ displayMenu }) => {
+    return (
+        <Card className='card col-5 p-1' classNamestyle={{ width: '5rem' }}>
+            <Card.Body>
+                <Card.Title>{displayMenu.title} - ${displayMenu.price}</Card.Title>
+                <Card.Subtitle className="mb-3 text-muted">{displayMenu.cuisine.label}</Card.Subtitle>
+                <Card.Text>
+                    {displayMenu.description}
+                </Card.Text>
+            </Card.Body>
+        </Card>
     )
 }
+
+    // <h2>{displayMenu.title}</h2>
+    // <h4>{displayMenu.price}</h4>
+    // <p>{displayMenu.description}</p>
+    // <p>{displayMenu.cuisine.label}</p>

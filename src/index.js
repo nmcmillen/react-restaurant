@@ -29,11 +29,6 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
   );
-  
-  {/* <App /> */}
-  {/* <Appetizers />
-  <Desserts />
-  <Mains /> */}
 
 
 // If you want to start measuring performance in your app, pass a function
