@@ -1,0 +1,14 @@
+#footer {
+    background-color: #231f20;
+    color: white;
+    text-align: justify;
+}
+
+#row-edit{
+    max-width: 900px;
+    margin: auto;
+}
+
+#location-text {
+    text-align: left;
+}
