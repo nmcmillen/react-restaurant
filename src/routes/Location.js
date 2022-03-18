@@ -1,39 +1,38 @@
 import React from 'react';
+import './Location.css';
+import map from './images/Map-Placeholder-Restaurant.PNG';
 
 export default function Location () {
     return (
-            <footer className="page-footer font-small blue pt-4">
-    <div className="container-fluid text-center text-md-left">
-        <div className="row">
-            <div className="col-md-6 mt-md-0 mt-3">
-                <h5 className="text-uppercase">Footer Content</h5>
-                <p>Here you can use rows and columns to organize your footer content.</p>
+        <footer className="page-footer font-small" id="footer">
+            <div className="container-fluid text-md-left">
+                <div className="row">
+                    <div className="col-md-6 mt-3 pl-3 justify-content-center">
+                        <h5 className="text-uppercase">Location & Hours</h5>
+                        <p>
+                            Monday-Thursday: 11:00am-9:00pm<br />
+                            Friday-Saturday: 11:00am-11:00pm<br />
+                            Sunday: 11:00am-9:00pm
+                        </p>
+                        <h5 className="text-uppercase">Find Us</h5>
+                        <p>
+                            348 Main St.<br />
+                            Lexington, KY 40503 <br />
+                            123-456-7890 <br />
+                        </p>
+                    </div>
+
+                    <hr className="clearfix w-100 d-md-none pb-0 d-flex justify-content-center text-center"/>
+
+                    <div className="col-md-6">
+                    <img src={map}
+                    className='img-fluid'
+                    alt=''
+                    style={{ maxWidth: '24rem' }}
+                    />
+                    </div>
+                </div>
             </div>
-
-            <hr className="clearfix w-100 d-md-none pb-0"/>
-
-            <div className="col-md-3 mb-md-0 mb-3">
-                <h5 className="text-uppercase">Links</h5>
-                <ul className="list-unstyled">
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
-                </ul>
-            </div>
-
-            <div className="col-md-3 mb-md-0 mb-3">
-                <h5 className="text-uppercase">Links</h5>
-                <ul className="list-unstyled">
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</footer>
+    </footer>
     )
 }

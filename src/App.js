@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link, Outlet } from "react-router-dom";
-import { Navbar, Container, Card, Nav, Button, Accordion } from 'react-bootstrap'
+import { Navbar, Container, Card, Nav, Button, Accordion, Image, Tab, Tabs, Sonnet } from 'react-bootstrap'
 import Appetizers from './routes/Appetizers';
 import Mains from './routes/Mains';
 import Desserts from './routes/Desserts';
@@ -21,49 +21,35 @@ function App() {
               <Nav.Link href="/">HOME</Nav.Link>
               <Nav.Link href="/mains">OUR MENU</Nav.Link>
               <Nav.Link href="/location">LOCATION</Nav.Link>
-
+              {/* 
               <Link to="appetizers">appetizers |</Link>
               <Link to="mains">mains |</Link>
-              <Link to="desserts">desserts |</Link>
+              <Link to="desserts">desserts |</Link> */}
               {/* <Outlet /> */}
             </Nav>
             </Container>
           </Navbar>
-          <Card.Title>GUSTO</Card.Title>
+          <div className="gusto-center">
+          <Card.Title id="res-name">GUSTO</Card.Title>
           <Card.Text>
             Adding some sort of text in here at some point that's very mouthwatering.
           </Card.Text>
           <Button variant="danger">Our Menu</Button>
+          </div>
         </Card.ImgOverlay>
       </Card>
 
-      <Accordion>
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>Appetizers</Accordion.Header>
-          <Accordion.Body>
-            {/* Appetizers Component */}
-          <Appetizers />
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Main Dishes</Accordion.Header>
-          <Accordion.Body>
-            {/* Mains Component */}
-          <Mains />
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="2">
-          <Accordion.Header>Desserts</Accordion.Header>
-          <Accordion.Body>
-            {/* Desserts Component */}
-          <Desserts />
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-
-
-
-
+      <Tabs defaultActiveKey="appetizers" id="uncontrolled-tab-example" className="mb-3">
+        <Tab eventKey="appetizers" title="Appetizers">
+        <Appetizers />
+        </Tab>
+        <Tab eventKey="mains" title="Main Dishes">
+        <Mains />
+        </Tab>
+        <Tab eventKey="desserts" title="Desserts">
+        <Desserts />
+        </Tab>
+      </Tabs>
 
 
       {/* <Appetizers /> */}
