@@ -37,6 +37,10 @@
   }
 }
 
+#hero-image {
+  object-fit: contain;
+}
+
 .gusto-center {
   margin: 0;
   position: absolute;
@@ -49,4 +53,16 @@
 
 #res-name {
   font-size: 4rem;
+}
+
+#button-edit {
+  background-color: transparent;
+  border-color: white;
+  border-radius: 2rem;
+}
+
+.menu-header {
+  background-color: #231f20;
+  color: white;
+  padding: 1rem;
 }

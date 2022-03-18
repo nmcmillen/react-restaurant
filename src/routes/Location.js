@@ -5,9 +5,9 @@ import map from './images/Map-Placeholder-Restaurant.PNG';
 export default function Location () {
     return (
         <footer className="page-footer font-small" id="footer">
-            <div className="container-fluid text-md-left">
-                <div className="row">
-                    <div className="col-md-6 mt-3 pl-3 justify-content-center">
+            <div className="container-fluid ">
+                <div className="row" id="row-edit">
+                    <div className="col-md-6 mt-3 pl-3 justify-content-center" id="location">
                         <h5 className="text-uppercase">Location & Hours</h5>
                         <p>
                             Monday-Thursday: 11:00am-9:00pm<br />

@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Card className="bg-dark text-white">
-        <Card.Img src="https://bit.ly/3Ji6eFS" alt="Gusto Hero Background" />
+        <Card.Img id="hero-image" src="https://bit.ly/3Ji6eFS" alt="Gusto Hero Background" />
         <Card.ImgOverlay>
           <Navbar bg="" variant="dark">
             <Container>
@@ -34,10 +34,12 @@ function App() {
           <Card.Text>
             Adding some sort of text in here at some point that's very mouthwatering.
           </Card.Text>
-          <Button variant="danger">Our Menu</Button>
+          <Button id="button-edit" variant="danger">Our Menu</Button>
           </div>
         </Card.ImgOverlay>
       </Card>
+
+      <h2 class="menu-header">MENU</h2>
 
       <Tabs defaultActiveKey="appetizers" id="uncontrolled-tab-example" className="mb-3">
         <Tab eventKey="appetizers" title="Appetizers">
