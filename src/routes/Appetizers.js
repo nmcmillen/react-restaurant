@@ -30,7 +30,7 @@ export default function Appetizer () {
 
 const Appetizers = ({ displayMenu }) => {
     return (
-        <Card className='card col-5 p-1' classNamestyle={{ width: '5rem' }}>
+        <Card className='card col-5 p-1'>
             <Card.Body>
                 <Card.Title>{displayMenu.title} - ${displayMenu.price}</Card.Title>
                 <Card.Subtitle className="mb-3 text-muted">{displayMenu.cuisine.label}</Card.Subtitle>
