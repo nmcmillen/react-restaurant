@@ -13,7 +13,7 @@ export default function Appetizer () {
         })
     }, []);
     
-    let dessertList = appetizers.filter((displayMenu) => displayMenu.category.title == "Appetizer" ).map((displayMenu) => {
+    let appList = appetizers.filter((displayMenu) => displayMenu.category.title == "Appetizer" ).map((displayMenu) => {
     return <Appetizers key={displayMenu.id} displayMenu={displayMenu} />;
     });
 
@@ -21,7 +21,7 @@ export default function Appetizer () {
         <main style={{ padding: "1rem 0" }} className="container">
           <div className="row justify-content-center text-center gap-2">
             <h2>Appetizers</h2>
-            {dessertList}
+            {appList}
           </div>
         </main>
       );

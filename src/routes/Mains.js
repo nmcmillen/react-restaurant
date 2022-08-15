@@ -13,7 +13,7 @@ export default function Main () {
         })
     }, []);
     
-    let mainList = mains.filter((displayMenu) => displayMenu.category.title == "Burgers" || "Sandwiches" || "Pasta" || "House Favorites" && displayMenu.cuisine.label == "American").map((displayMenu) => {
+    let mainList = mains.filter((displayMenu) => (displayMenu.category.title === "Burgers" || "Sandwiches" || "Pasta" || "House Favorites") && displayMenu.cuisine.label === "American").map((displayMenu) => {
     return <Apps key={displayMenu.id} displayMenu={displayMenu} />;
     });
 
