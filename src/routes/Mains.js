@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Navbar, Container, Card, Nav, Button, Col } from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
 import { getData } from '../utilities/data';
 
 export default function Main () {
@@ -41,8 +40,3 @@ const Apps = ({ displayMenu }) => {
         </Card>
     )
 }
-
-    // <h2>{displayMenu.title}</h2>
-    // <h4>{displayMenu.price}</h4>
-    // <p>{displayMenu.description}</p>
-    // <p>{displayMenu.cuisine.label}</p>

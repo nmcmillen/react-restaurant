@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Navbar, Container, Card, Nav, Button, Col } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import { getData } from '../utilities/data';
 
 export default function Appetizer () {
@@ -13,7 +12,7 @@ export default function Appetizer () {
         })
     }, []);
     
-    let appList = appetizers.filter((displayMenu) => displayMenu.category.title == "Appetizer" ).map((displayMenu) => {
+    let appList = appetizers.filter((displayMenu) => displayMenu.category.title === "Appetizer" ).map((displayMenu) => {
     return <Appetizers key={displayMenu.id} displayMenu={displayMenu} />;
     });
 
@@ -41,8 +40,3 @@ const Appetizers = ({ displayMenu }) => {
         </Card>
     )
 }
-
-    // <h2>{displayMenu.title}</h2>
-    // <h4>{displayMenu.price}</h4>
-    // <p>{displayMenu.description}</p>
-    // <p>{displayMenu.cuisine.label}</p>
